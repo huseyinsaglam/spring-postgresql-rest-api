@@ -1,17 +1,18 @@
 package com.example.springpostgresqlrestapi.service;
 
 import com.example.springpostgresqlrestapi.dto.PersonDto;
-import com.example.springpostgresqlrestapi.entity.Person;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
+
 public interface PersonService {
 
-    PersonDto save(Person Dto);
+    PersonDto save(PersonDto Dto);
 
     Boolean delete(Long id);
 
-    PersonDto getAll(PersonDto personDto);
+    List<PersonDto> getAll();
 
     Page<PersonDto> getAll(Pageable pageable);
 }
